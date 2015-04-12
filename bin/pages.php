@@ -11,6 +11,8 @@ if( class_exists('Page') && method_exists('Page','register')){
 
 // add hooks
 if( class_exists('Controller') && method_exists('Controller','register') ){
+	Controller::register("page-edit", PageMeta::edit);
+
 	Controller::register("page-fields", PageMeta::fields);
 
 	Controller::register("page-save", PageMeta::save);
