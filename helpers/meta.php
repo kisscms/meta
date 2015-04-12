@@ -1,0 +1,11 @@
+<?
+
+function AdminEditMeta(){
+
+}
+
+function AdminSaveMeta(){
+
+}
+
+?>
