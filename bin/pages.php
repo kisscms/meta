@@ -10,10 +10,10 @@ if( class_exists('Page') && method_exists(new Page(),'register')){
 }
 
 // add hooks
-if( class_exists('Admin') && method_exists(new Admin(),'register')){
-	Admin::register("edit-fields", AdminEditMeta);
+if( method_exists(new Admin(),'register')){
+	Admin::register("page-fields", PageMeta::fields);
 
-	Admin::register("save", AdminSaveMeta);
+	Admin::register("page-save", PageMeta::save);
 }
 
 ?>
