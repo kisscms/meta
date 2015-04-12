@@ -1,5 +1,3 @@
-<?
-
 <?php
 
 class PageMeta {
@@ -10,8 +8,5 @@ class PageMeta {
 	public static function save(){
 	}
 }
-
-?>
-
 
 ?>

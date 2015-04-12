@@ -4,16 +4,16 @@
 // Pages Initialization
 //===============================================
 
-if( class_exists('Page') && method_exists(new Page(),'register')){
+if( class_exists('Page') && method_exists('Page','register')){
 	// Register variables
 	Page::register("1", "meta", "");
 }
 
 // add hooks
-if( method_exists(new Admin(),'register')){
-	Admin::register("page-fields", PageMeta::fields);
+if( class_exists('Controller') && method_exists('Controller','register') ){
+	Controller::register("page-fields", PageMeta::fields);
 
-	Admin::register("page-save", PageMeta::save);
+	Controller::register("page-save", PageMeta::save);
 }
 
 ?>
