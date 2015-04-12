@@ -11,11 +11,13 @@ if( class_exists('Page') && method_exists('Page','register')){
 
 // add hooks
 if( class_exists('Controller') && method_exists('Controller','on') ){
-	Controller::on("page-edit", PageMeta::edit);
 
-	Controller::on("page-fields", PageMeta::fields);
+	Controller::on("admin-edit", 'PageMeta' );
 
-	Controller::on("page-save", PageMeta::save);
+	Controller::on("admin-fields", 'PageMeta');
+
+	Controller::on("admin-save", 'PageMeta' );
+
 }
 
 ?>
