@@ -21,4 +21,4 @@ $index++;
 var admin_meta_data = <?=json_encode($meta) ?>;
 var admin_meta_data_length = admin_meta_data.length;
 </script>
-<script type="text/javascript" "<?=url("/assets/js/admin/meta.js") ?>" data-type="require" data-path="admin-meta" data-deps="jquery"></script>
+<script type="text/javascript" src="<?=url("/assets/js/admin/meta.js") ?>" data-type="require" data-path="admin-meta" data-deps="jquery"></script>
