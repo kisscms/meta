@@ -1,6 +1,3 @@
-<?
-	if( !isset( $meta ) ) $meta = array();
-?>
 <h3>Meta</h3>
 <section id="meta">
 <?
