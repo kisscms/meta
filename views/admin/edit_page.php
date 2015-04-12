@@ -20,12 +20,5 @@ $index++;
 <script type="text/javascript">
 var admin_meta_data = <?=json_encode($meta) ?>;
 var admin_meta_data_length = admin_meta_data.length;
-$(document).ready(function(){
-	// events
-	$("#meta-create").click(function(){
-		admin_meta_data_length++;
-		var admin_meta_html = '<fieldset id="meta-'+ admin_meta_data_length +'"><input type="text" name="meta-key-'+ admin_meta_data_length +'" value=""><input type="text" name="meta-value-'+ admin_meta_data_length +'" value=""></fieldset>';
-		$("section#meta").append = admin_meta_html;
-	});
-});
 </script>
+<script type="text/javascript" "<?=url("/assets/js/admin/meta.js") ?>" data-type="require" data-path="admin-meta" data-deps="jquery"></script>
