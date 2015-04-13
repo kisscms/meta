@@ -6,6 +6,7 @@ $index = 1;
 foreach( $meta as $key => $value ){
 ?>
 <fieldset id="meta-<?=$index?>">
+	<a href="#" class="delete" align="right">[x]</a>
 	<input type="text" name="meta-key-<?=$index?>" value="<?=$key?>">
 	<input type="text" name="meta-value-<?=$index?>" value="<?=$value?>">
 </fieldset>
