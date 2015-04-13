@@ -1,6 +1,7 @@
 <h3>Meta</h3>
 <section id="meta">
 <?
+if( !isset( $meta ) ) $meta = array();
 $index = 1;
 foreach( $meta as $key => $value ){
 ?>
