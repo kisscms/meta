@@ -10,6 +10,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		$el = $(e.target).closest("fieldset");
 		$el.remove();
+		return false;
 	});
 });
 
