@@ -12,6 +12,11 @@ class PageMeta {
 		}
 	}
 
+	public static function read( &$data ){
+		if( !array_key_exists('meta', $data ) ) $data['meta'] = array();
+		if( is_string( $data['meta'] ) ) $data['meta'] = json_decode($data['meta'], true);
+	}
+
 	public static function fields( &$data ){
 		$view = View::do_fetch( getPath('views/admin/page-meta-fields.php'), $data );
 		echo $view; // return instead?
