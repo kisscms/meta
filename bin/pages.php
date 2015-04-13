@@ -10,13 +10,15 @@ if( class_exists('Page') && method_exists('Page','register')){
 }
 
 // add hooks
-if( class_exists('Controller') && method_exists('Controller','on') ){
+if( class_exists('Event') && method_exists('Event','on') ){
 
-	Controller::on("admin:edit", 'PageMeta' );
+	Event::on("admin:edit", 'PageMeta' );
 
-	Controller::on("admin:fields", 'PageMeta');
+	Event::on("page:read", 'PageMeta');
 
-	Controller::on("admin:save", 'PageMeta' );
+	Event::on("admin:fields", 'PageMeta');
+
+	Event::on("admin:save", 'PageMeta' );
 
 }
 
