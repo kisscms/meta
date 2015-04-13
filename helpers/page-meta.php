@@ -18,6 +18,29 @@ class PageMeta {
 	}
 
 	public static function save( &$data ){
+		$meta = array();
+		//$key, $value;
+
+		foreach( $data as $i => $field ){
+			// find meta fields
+			if( strpos($i, 'meta-') === false ) continue;
+			if( strpos($i, 'meta-key-') !== false ){
+				$key = $field;
+				unset($data[$i]);
+			};
+			if( strpos($i, 'meta-value-') !== false ){
+				$value = $field;
+				unset($data[$i]);
+			};
+			if( isset($key) && isset($value) ){
+				$meta[$key] = $value;
+				// reset
+				unset($key);
+				unset($value);
+			}
+
+		}
+		$data['meta'] = json_encode( $meta );
 	}
 }
 
